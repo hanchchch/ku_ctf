@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ Configs.ctf_name }}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="{{ url_for('views.themes', path='img/favicon.ico') }}" type="image/x-icon">
+	<link rel="stylesheet" href="{{ url_for('views.themes', path='css/main.css') }}">
+	<link rel="stylesheet" href="{{ url_for('views.themes', path='css/core.css') }}">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
+	<style>
+	html, body, .container {
+		background-color: black;
+		font-family: "Roboto", sans-serif;
+		color: white;
+	}
+	h1, h2, h3 {
+    font-family: "Roboto", sans-serif;
+	}
+	.table {
+    color: #dedad6;
+	}
+	</style>
+	{% block stylesheets %}
+	{% endblock %}
+
+	{{ Plugins.styles }}
+	<script type="text/javascript">
+		var init = {
+			'urlRoot': "{{ request.script_root }}",
+			'csrfNonce': "{{ Session.nonce }}",
+			'userMode': "{{ Configs.user_mode }}",
+			'userId': {{ Session.id }},
+			'start': {{ Configs.start | tojson }},
+			'end': {{ Configs.end | tojson }},
+			'theme_settings': {{ Configs.theme_settings | tojson }}
+		}
+	</script>
+	{{ Configs.theme_header }}
+</head>
+<body>
+	{% include "components/navbar.html" %}
+
+	<main role="main">
+		{% block content %}
+		{% endblock %}
+
+	</main>
+
+	<footer class="footer">
+		<div class="container text-center">
+			<a href="https://ctfd.io" class="text-secondary">
+				<small class="text-muted">Powered by CTFd</small>
+			</a>
+		</div>
+	</footer>
+
+	<script defer src="{{ url_for('views.themes', path='js/vendor.bundle.js') }}"></script>
+	<script defer src="{{ url_for('views.themes', path='js/core.js') }}"></script>
+	<script defer src="{{ url_for('views.themes', path='js/helpers.js') }}"></script>
+
+	{% block entrypoint %}
+	<script defer src="{{ url_for('views.themes', path='js/pages/main.js') }}"></script>
+	{% endblock %}
+
+	{% block scripts %}
+	{% endblock %}
+
+	{{ Plugins.scripts }}
+
+	{{ Configs.theme_footer }}
+</body>
+</html>
