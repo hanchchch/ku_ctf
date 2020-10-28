@@ -1,5 +1,5 @@
 import sqlite3
-
+import json
 from init_setting import config as raw_config, pages, teams, users, admin_id, admin_pw
 
 con = sqlite3.connect('./CTFd/ctfd.db')
@@ -36,8 +36,8 @@ insert("pages", pages)
 insert("teams", teams)
 insert("users", users)
 
-print("admin id: "+str(admin_id))
-print("admin pw: "+str(admin_pw))
+print("admin id: "+admin_id)
+print("admin pw: "+admin_pw.decode())
 
 challenges = [
     (1, 'test_chall_1', 'description', 0, 
@@ -69,6 +69,9 @@ flags = [
 delete("challenges")
 delete("dynamic_challenge")
 delete("flags")
+delete("tracking")
+delete("submissions")
+delete("solves")
 
 insert("challenges", challenges)
 insert("dynamic_challenge", dynamic_challenge)

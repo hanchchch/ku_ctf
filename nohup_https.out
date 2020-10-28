@@ -404,3 +404,429 @@ INFO  [werkzeug] 39.7.55.88 - - [28/Oct/2020 13:37:35] "[37mGET /api/v1/scorebo
 INFO  [werkzeug] 39.7.55.88 - - [28/Oct/2020 13:37:35] "[37mGET /events HTTP/1.1[0m" 200 -
 INFO  [werkzeug] 39.7.55.88 - - [28/Oct/2020 13:44:12] "[37mGET /api/v1/scoreboard/top/10 HTTP/1.1[0m" 200 -
 INFO  [werkzeug] 39.7.55.88 - - [28/Oct/2020 13:44:12] "[37mGET /api/v1/scoreboard HTTP/1.1[0m" 200 -
+ERROR [CTFd] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask_restx/api.py", line 639, in error_router
+    return original_handler(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1948, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2242, in preprocess_request
+    rv = func()
+  File "/home/hanch/ku_ctf/CTFd/utils/initialization/__init__.py", line 240, in banned
+    team = get_current_team_attrs()
+  File "/home/hanch/ku_ctf/CTFd/utils/user/__init__.py", line 98, in get_current_team_attrs
+    if user.team_id:
+AttributeError: 'NoneType' object has no attribute 'team_id'
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:08:25] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR [werkzeug] Error on request:
+Traceback (most recent call last):
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask_restx/api.py", line 639, in error_router
+    return original_handler(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1948, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2242, in preprocess_request
+    rv = func()
+  File "/home/hanch/ku_ctf/CTFd/utils/initialization/__init__.py", line 240, in banned
+    team = get_current_team_attrs()
+  File "/home/hanch/ku_ctf/CTFd/utils/user/__init__.py", line 98, in get_current_team_attrs
+    if user.team_id:
+AttributeError: 'NoneType' object has no attribute 'team_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hanch/.local/lib/python3.6/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/hanch/.local/lib/python3.6/site-packages/werkzeug/serving.py", line 312, in execute
+    application_iter = app(environ, start_response)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask_restx/api.py", line 639, in error_router
+    return original_handler(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1879, in handle_exception
+    server_error = handler(server_error)
+  File "/home/hanch/ku_ctf/CTFd/errors.py", line 20, in general_error
+    return render_template("errors/500.html", error=error.description), 500
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/hanch/.local/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/hanch/.local/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/hanch/.local/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/hanch/ku_ctf/CTFd/themes/core/templates/errors/500.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/hanch/ku_ctf/CTFd/themes/core/templates/base.html", line 43, in top-level template code
+    {% include "components/navbar.html" %}
+  File "/home/hanch/ku_ctf/CTFd/themes/core/templates/components/navbar.html", line 43, in top-level template code
+    {% if is_admin() %}
+  File "/home/hanch/.local/lib/python3.6/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/hanch/ku_ctf/CTFd/utils/user/__init__.py", line 129, in is_admin
+    return user.type == "admin"
+AttributeError: 'NoneType' object has no attribute 'type'
+ERROR [CTFd] Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask_restx/api.py", line 639, in error_router
+    return original_handler(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1948, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2242, in preprocess_request
+    rv = func()
+  File "/home/hanch/ku_ctf/CTFd/utils/initialization/__init__.py", line 240, in banned
+    team = get_current_team_attrs()
+  File "/home/hanch/ku_ctf/CTFd/utils/user/__init__.py", line 98, in get_current_team_attrs
+    if user.team_id:
+AttributeError: 'NoneType' object has no attribute 'team_id'
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:08:25] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+ERROR [werkzeug] Error on request:
+Traceback (most recent call last):
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask_restx/api.py", line 639, in error_router
+    return original_handler(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1948, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2242, in preprocess_request
+    rv = func()
+  File "/home/hanch/ku_ctf/CTFd/utils/initialization/__init__.py", line 240, in banned
+    team = get_current_team_attrs()
+  File "/home/hanch/ku_ctf/CTFd/utils/user/__init__.py", line 98, in get_current_team_attrs
+    if user.team_id:
+AttributeError: 'NoneType' object has no attribute 'team_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hanch/.local/lib/python3.6/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/hanch/.local/lib/python3.6/site-packages/werkzeug/serving.py", line 312, in execute
+    application_iter = app(environ, start_response)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask_restx/api.py", line 639, in error_router
+    return original_handler(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1879, in handle_exception
+    server_error = handler(server_error)
+  File "/home/hanch/ku_ctf/CTFd/errors.py", line 20, in general_error
+    return render_template("errors/500.html", error=error.description), 500
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/hanch/.local/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/hanch/.local/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/hanch/.local/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/hanch/ku_ctf/CTFd/themes/core/templates/errors/500.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/hanch/ku_ctf/CTFd/themes/core/templates/base.html", line 43, in top-level template code
+    {% include "components/navbar.html" %}
+  File "/home/hanch/ku_ctf/CTFd/themes/core/templates/components/navbar.html", line 43, in top-level template code
+    {% if is_admin() %}
+  File "/home/hanch/.local/lib/python3.6/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/hanch/ku_ctf/CTFd/utils/user/__init__.py", line 129, in is_admin
+    return user.type == "admin"
+AttributeError: 'NoneType' object has no attribute 'type'
+ERROR [CTFd] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask_restx/api.py", line 639, in error_router
+    return original_handler(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1948, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2242, in preprocess_request
+    rv = func()
+  File "/home/hanch/ku_ctf/CTFd/utils/initialization/__init__.py", line 240, in banned
+    team = get_current_team_attrs()
+  File "/home/hanch/ku_ctf/CTFd/utils/user/__init__.py", line 98, in get_current_team_attrs
+    if user.team_id:
+AttributeError: 'NoneType' object has no attribute 'team_id'
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:08:28] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR [werkzeug] Error on request:
+Traceback (most recent call last):
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask_restx/api.py", line 639, in error_router
+    return original_handler(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1948, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2242, in preprocess_request
+    rv = func()
+  File "/home/hanch/ku_ctf/CTFd/utils/initialization/__init__.py", line 240, in banned
+    team = get_current_team_attrs()
+  File "/home/hanch/ku_ctf/CTFd/utils/user/__init__.py", line 98, in get_current_team_attrs
+    if user.team_id:
+AttributeError: 'NoneType' object has no attribute 'team_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hanch/.local/lib/python3.6/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/hanch/.local/lib/python3.6/site-packages/werkzeug/serving.py", line 312, in execute
+    application_iter = app(environ, start_response)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask_restx/api.py", line 639, in error_router
+    return original_handler(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1879, in handle_exception
+    server_error = handler(server_error)
+  File "/home/hanch/ku_ctf/CTFd/errors.py", line 20, in general_error
+    return render_template("errors/500.html", error=error.description), 500
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/hanch/.local/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/hanch/.local/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/hanch/.local/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/hanch/ku_ctf/CTFd/themes/core/templates/errors/500.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/hanch/ku_ctf/CTFd/themes/core/templates/base.html", line 43, in top-level template code
+    {% include "components/navbar.html" %}
+  File "/home/hanch/ku_ctf/CTFd/themes/core/templates/components/navbar.html", line 43, in top-level template code
+    {% if is_admin() %}
+  File "/home/hanch/.local/lib/python3.6/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/hanch/ku_ctf/CTFd/utils/user/__init__.py", line 129, in is_admin
+    return user.type == "admin"
+AttributeError: 'NoneType' object has no attribute 'type'
+ERROR [CTFd] Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask_restx/api.py", line 639, in error_router
+    return original_handler(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1948, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2242, in preprocess_request
+    rv = func()
+  File "/home/hanch/ku_ctf/CTFd/utils/initialization/__init__.py", line 240, in banned
+    team = get_current_team_attrs()
+  File "/home/hanch/ku_ctf/CTFd/utils/user/__init__.py", line 98, in get_current_team_attrs
+    if user.team_id:
+AttributeError: 'NoneType' object has no attribute 'team_id'
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:08:28] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+ERROR [werkzeug] Error on request:
+Traceback (most recent call last):
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask_restx/api.py", line 639, in error_router
+    return original_handler(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1948, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2242, in preprocess_request
+    rv = func()
+  File "/home/hanch/ku_ctf/CTFd/utils/initialization/__init__.py", line 240, in banned
+    team = get_current_team_attrs()
+  File "/home/hanch/ku_ctf/CTFd/utils/user/__init__.py", line 98, in get_current_team_attrs
+    if user.team_id:
+AttributeError: 'NoneType' object has no attribute 'team_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hanch/.local/lib/python3.6/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/hanch/.local/lib/python3.6/site-packages/werkzeug/serving.py", line 312, in execute
+    application_iter = app(environ, start_response)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask_restx/api.py", line 639, in error_router
+    return original_handler(e)
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/app.py", line 1879, in handle_exception
+    server_error = handler(server_error)
+  File "/home/hanch/ku_ctf/CTFd/errors.py", line 20, in general_error
+    return render_template("errors/500.html", error=error.description), 500
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/hanch/.local/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/hanch/.local/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/hanch/.local/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/hanch/.local/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/hanch/ku_ctf/CTFd/themes/core/templates/errors/500.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/hanch/ku_ctf/CTFd/themes/core/templates/base.html", line 43, in top-level template code
+    {% include "components/navbar.html" %}
+  File "/home/hanch/ku_ctf/CTFd/themes/core/templates/components/navbar.html", line 43, in top-level template code
+    {% if is_admin() %}
+  File "/home/hanch/.local/lib/python3.6/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/hanch/ku_ctf/CTFd/utils/user/__init__.py", line 129, in is_admin
+    return user.type == "admin"
+AttributeError: 'NoneType' object has no attribute 'type'
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:03] "[37mGET / HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:03] "[37mGET /themes/core/static/img/favicon.ico?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:03] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:05] "[32mGET /challenges HTTP/1.1[0m" 302 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:05] "[37mGET /login?next=%2Fchallenges%3F HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:05] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:06] "[37mGET /scoreboard HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:06] "[37mGET /api/v1/scoreboard/top/10 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:06] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:09] "[37mGET /teams/2 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:09] "[33mGET /themes/core/static/js/graphs.dev.js?d=9f7910a1 HTTP/1.1[0m" 404 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:11] "[37mGET /api/v1/scoreboard/top/10 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:11] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:12] "[37mGET /teams/1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:12] "[33mGET /themes/core/static/js/graphs.dev.js?d=9f7910a1 HTTP/1.1[0m" 404 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:13] "[37mGET /api/v1/scoreboard/top/10 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:13] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:14] "[37mGET /users HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:15] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:16] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:16] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+[10/28/2020 14:09:22] 163.152.3.170 - submitted invalid password for None
+[10/28/2020 14:09:22] 163.152.3.170 - submitted invalid password for None
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:22] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:23] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+[10/28/2020 14:09:38] 163.152.3.170 - None logged in
+[10/28/2020 14:09:38] 163.152.3.170 - None logged in
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:38] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:38] "[37mGET /challenges HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:38] "[37mGET /themes/core/static/css/challenge-board.dev.css?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:38] "[37mGET /themes/core/static/js/pages/challenges.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:38] "[37mGET /api/v1/teams/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:38] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:38] "[37mGET /api/v1/challenges HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:38] "[37mGET /api/v1/teams/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:09:39] "[37mGET /api/v1/users/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:10:09] "[32mGET /challenges HTTP/1.1[0m" 302 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:10:09] "[37mGET /login?next=%2Fchallenges%3F HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:10:09] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+[10/28/2020 14:10:14] 163.152.3.170 - None logged in
+[10/28/2020 14:10:14] 163.152.3.170 - None logged in
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:10:14] "[32mPOST /login?next=%2Fchallenges%3F HTTP/1.1[0m" 302 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:10:14] "[37mGET /challenges HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:10:14] "[37mGET /api/v1/teams/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:10:14] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:10:14] "[37mGET /api/v1/challenges HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:10:14] "[37mGET /api/v1/teams/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:10:15] "[37mGET /api/v1/users/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:12:56] "[32mGET /challenges HTTP/1.1[0m" 302 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:12:56] "[37mGET /login?next=%2Fchallenges%3F HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:12:57] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+[10/28/2020 14:13:00] 163.152.3.170 - None logged in
+[10/28/2020 14:13:00] 163.152.3.170 - None logged in
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:00] "[32mPOST /login?next=%2Fchallenges%3F HTTP/1.1[0m" 302 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:00] "[37mGET /challenges HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:01] "[37mGET /api/v1/teams/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:01] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:01] "[37mGET /api/v1/challenges HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:01] "[37mGET /api/v1/teams/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:01] "[37mGET /api/v1/users/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:07] "[37mGET /api/v1/challenges/3 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:07] "[37mGET /plugins/dynamic_challenges/assets/view.js?_=1603861981106 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:07] "[37mGET /plugins/dynamic_challenges/assets/view.html HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:07] "[37mGET /api/v1/challenges/3/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:09] "[37mGET /scoreboard HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:10] "[37mGET /api/v1/scoreboard/top/10 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:10] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:12] "[37mGET /users HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:12] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:14] "[37mGET /challenges HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:14] "[37mGET /api/v1/teams/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:14] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:14] "[37mGET /api/v1/challenges HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:15] "[32mGET /admin HTTP/1.1[0m" 302 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:15] "[37mGET /api/v1/teams/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:15] "[37mGET /api/v1/users/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:15] "[37mGET /admin/statistics HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:15] "[37mGET /themes/core/static/css/fonts.dev.css?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:15] "[37mGET /themes/admin/static/css/admin.dev.css?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:15] "[37mGET /themes/admin/static/css/codemirror.dev.css?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:15] "[37mGET /themes/admin/static/js/vendor.bundle.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:15] "[37mGET /themes/admin/static/js/core.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:15] "[37mGET /themes/admin/static/js/helpers.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:15] "[37mGET /themes/admin/static/js/components.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:15] "[37mGET /themes/admin/static/js/pages/statistics.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:15] "[37mGET /themes/admin/static/js/echarts.bundle.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:15] "[37mGET /themes/admin/static/js/graphs.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:17] "[37mGET /api/v1/statistics/challenges/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:18] "[37mGET /api/v1/statistics/submissions/type HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:18] "[37mGET /api/v1/statistics/challenges/category HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:18] "[37mGET /api/v1/statistics/challenges/solves/percentages HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:18] "[37mGET /api/v1/statistics/scores/distribution HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:18] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:19] "[37mGET /api/v1/teams/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:19] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:19] "[37mGET /api/v1/challenges HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:19] "[37mGET /api/v1/teams/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.170 - - [28/Oct/2020 14:13:19] "[37mGET /api/v1/users/me/solves HTTP/1.1[0m" 200 -
