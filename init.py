@@ -16,7 +16,7 @@ def insert(table, datas):
     if type(datas) == list:
         for data in datas:
             _insert(table, data)
-    elif type(datas) == tuple
+    elif type(datas) == tuple:
         _insert(table, datas)
 
 
