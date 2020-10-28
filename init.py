@@ -1,6 +1,6 @@
 import sqlite3
 
-from init_setting import config as raw_config, pages, teams, users, admin_pw
+from init_setting import config as raw_config, pages, teams, users, admin_id, admin_pw
 
 con = sqlite3.connect('./CTFd/ctfd.db')
 cur = con.cursor()
@@ -36,6 +36,7 @@ insert("pages", pages)
 insert("teams", teams)
 insert("users", users)
 
+print("admin id: "+str(admin_id))
 print("admin pw: "+str(admin_pw))
 
 challenges = [
@@ -64,7 +65,6 @@ flags = [
     (3, 3, 'static', 'KOREA{flag}',''),
     (4, 4, 'static', 'KOREA{flag}',''),
 ]
-
 
 delete("challenges")
 delete("dynamic_challenge")
