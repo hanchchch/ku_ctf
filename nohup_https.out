@@ -342,3 +342,5 @@ INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:45] "[37mGET /events HT
 INFO  [werkzeug] 74.82.47.5 - - [28/Oct/2020 13:18:27] "[37mGET / HTTP/1.1[0m" 200 -
 INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:21:46] "[37mGET /api/v1/scoreboard HTTP/1.1[0m" 200 -
 INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:21:46] "[37mGET /api/v1/scoreboard/top/10 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:26:46] "[37mGET /api/v1/scoreboard HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:26:46] "[37mGET /api/v1/scoreboard/top/10 HTTP/1.1[0m" 200 -

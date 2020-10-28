@@ -81,4 +81,4 @@ flask_profiler.sql
 
 init.py
 
-ssl/*
+ssl/
