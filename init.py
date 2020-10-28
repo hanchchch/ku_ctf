@@ -9,7 +9,7 @@ def delete(table):
     cur.execute("DELETE FROM "+table+" WHERE 1=1")
 
 def _insert(table, data):
-    sql = "INSERT INTO "+table+" VALUES (?"+",?"*(len(data)-1)+"?)"
+    sql = "INSERT INTO "+table+" VALUES (?"+",?"*(len(data)-1)+")"
     cur.execute(sql, data)
 
 def insert(table, datas):
