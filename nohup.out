@@ -1,0 +1,20 @@
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+ * Importing gevent and monkey patching. Use --disable-gevent to disable.
+ * Loaded module, <module 'CTFd.plugins.challenges' from '/home/hanch/ku_ctf/CTFd/plugins/challenges/__init__.py'>
+ * Loaded module, <module 'CTFd.plugins.dynamic_challenges' from '/home/hanch/ku_ctf/CTFd/plugins/dynamic_challenges/__init__.py'>
+ * Loaded module, <module 'CTFd.plugins.flags' from '/home/hanch/ku_ctf/CTFd/plugins/flags/__init__.py'>
+ * Serving Flask app "CTFd" (lazy loading)
+ * Environment: development
+ * Debug mode: on
+INFO  [werkzeug]  * Running on http://0.0.0.0:31443/ (Press CTRL+C to quit)
+INFO  [werkzeug]  * Restarting with stat
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+WARNI [werkzeug]  * Debugger is active!
+INFO  [werkzeug]  * Debugger PIN: 187-271-522
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 11:28:28] "[37mGET /events HTTP/1.1[0m" 200 -
+KeyboardInterrupt
+2020-10-28T02:28:44Z
+KeyboardInterrupt
+2020-10-28T02:28:44Z

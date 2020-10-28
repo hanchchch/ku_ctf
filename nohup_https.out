@@ -1,0 +1,344 @@
+nohup: ignoring input
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+ * Importing gevent and monkey patching. Use --disable-gevent to disable.
+ * Loaded module, <module 'CTFd.plugins.challenges' from '/home/hanch/ku_ctf/CTFd/plugins/challenges/__init__.py'>
+ * Loaded module, <module 'CTFd.plugins.dynamic_challenges' from '/home/hanch/ku_ctf/CTFd/plugins/dynamic_challenges/__init__.py'>
+ * Loaded module, <module 'CTFd.plugins.flags' from '/home/hanch/ku_ctf/CTFd/plugins/flags/__init__.py'>
+ * Serving Flask app "CTFd" (lazy loading)
+ * Environment: development
+ * Debug mode: off
+INFO  [werkzeug]  * Running on https://0.0.0.0:443/ (Press CTRL+C to quit)
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 11:51:55] "[37mGET / HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 11:51:55] "[37mGET /themes/core/static/css/main.dev.css?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 11:51:55] "[37mGET /themes/core/static/css/core.dev.css?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 11:51:55] "[37mGET /themes/core/static/img/ctf_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 11:51:55] "[37mGET /themes/core/static/img/ku_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 11:51:55] "[37mGET /themes/core/static/img/cs_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 11:51:55] "[37mGET /themes/core/static/img/cydf_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 11:51:55] "[37mGET /themes/core/static/img/cykor_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 11:51:55] "[37mGET /themes/core/static/js/vendor.bundle.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 11:51:55] "[37mGET /themes/core/static/js/core.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 11:51:56] "[37mGET /themes/core/static/js/helpers.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 11:51:56] "[37mGET /themes/core/static/js/pages/main.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 11:51:57] "[37mGET /themes/core/static/sounds/notification.webm HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 11:51:57] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 11:51:57] "[37mGET /themes/core/static/img/favicon.ico?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 11:53:07] "[37mGET / HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 11:53:07] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 11:53:07] "[37mGET /themes/core/static/img/favicon.ico?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 12:04:52] "[37mGET / HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 12:04:52] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 12:04:52] "[37mGET /themes/core/static/img/favicon.ico?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 12:04:54] "[37mGET /settings HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 12:04:54] "[37mGET /themes/core/static/js/pages/settings.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 12:04:54] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 12:04:56] "[37mGET /scoreboard HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 12:04:56] "[37mGET /themes/core/static/js/pages/scoreboard.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 12:04:56] "[37mGET /themes/core/static/js/echarts.bundle.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 12:04:56] "[37mGET /users HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 12:04:57] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 12:04:58] "[37mGET /scoreboard HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 12:04:58] "[37mGET /themes/core/static/js/echarts.bundle.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 12:04:59] "[37mGET /api/v1/scoreboard/top/10 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 12:04:59] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 211.249.205.129 - - [28/Oct/2020 12:06:03] "[37mGET / HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 203.133.180.76 - - [28/Oct/2020 12:06:04] "[37mGET /themes/core/static/img/ctf_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:08] "[37mGET / HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:08] "[37mGET /themes/core/static/css/main.dev.css?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:09] "[37mGET /themes/core/static/css/core.dev.css?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:09] "[37mGET /themes/core/static/img/ctf_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:09] "[37mGET /themes/core/static/img/ku_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:09] "[37mGET /themes/core/static/img/cs_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:09] "[37mGET /themes/core/static/img/cydf_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:09] "[37mGET /themes/core/static/img/cykor_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:09] "[37mGET /themes/core/static/js/vendor.bundle.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:09] "[37mGET /themes/core/static/js/core.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:09] "[37mGET /themes/core/static/js/helpers.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:09] "[37mGET /themes/core/static/js/pages/main.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:10] "[37mGET /themes/core/static/sounds/notification.webm HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:10] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:10] "[37mGET /themes/core/static/img/favicon.ico?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:16] "[37mGET /scoreboard HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:16] "[37mGET /themes/core/static/js/pages/scoreboard.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:16] "[37mGET /themes/core/static/js/echarts.bundle.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:17] "[37mGET /api/v1/scoreboard/top/10 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:17] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:20] "[32mGET /challenges HTTP/1.1[0m" 302 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:20] "[37mGET /login?next=%2Fchallenges%3F HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:20] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:21] "[37mGET /users HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:21] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:21] "[32mGET /challenges HTTP/1.1[0m" 302 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:21] "[37mGET /login?next=%2Fchallenges%3F HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:21] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:22] "[37mGET /users HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:22] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:23] "[32mGET /challenges HTTP/1.1[0m" 302 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:23] "[37mGET /login?next=%2Fchallenges%3F HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:23] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+[10/28/2020 12:06:29] 221.147.226.187 - None logged in
+[10/28/2020 12:06:29] 221.147.226.187 - None logged in
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:29] "[32mPOST /login?next=%2Fchallenges%3F HTTP/1.1[0m" 302 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:29] "[37mGET /challenges HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:30] "[37mGET /themes/core/static/css/challenge-board.dev.css?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:30] "[37mGET /themes/core/static/js/pages/challenges.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:30] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:30] "[37mGET /api/v1/teams/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:30] "[37mGET /api/v1/challenges HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:30] "[37mGET /api/v1/teams/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:30] "[37mGET /api/v1/users/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:32] "[37mGET /api/v1/challenges/2 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:32] "[37mGET /plugins/dynamic_challenges/assets/view.js?_=1603854389001 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:32] "[37mGET /plugins/dynamic_challenges/assets/view.html HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:06:32] "[37mGET /api/v1/challenges/2/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:17] "[37mGET /api/v1/challenges/2 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:17] "[37mGET /plugins/dynamic_challenges/assets/view.js?_=1603854389002 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:17] "[37mGET /api/v1/challenges/2/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:19] "[37mGET /api/v1/challenges/4 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:19] "[37mGET /plugins/dynamic_challenges/assets/view.js?_=1603854389003 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:19] "[37mGET /api/v1/challenges/4/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:20] "[37mGET /api/v1/challenges/3 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:20] "[37mGET /plugins/dynamic_challenges/assets/view.js?_=1603854389004 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:20] "[37mGET /api/v1/challenges/3/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:27] "[37mGET /api/v1/challenges/2 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:27] "[37mGET /plugins/dynamic_challenges/assets/view.js?_=1603854389005 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:27] "[37mGET /api/v1/challenges/2/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:28] "[37mGET /api/v1/challenges/4 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:28] "[37mGET /plugins/dynamic_challenges/assets/view.js?_=1603854389006 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:28] "[37mGET /api/v1/challenges/4/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:30] "[37mGET /api/v1/challenges/3 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:30] "[37mGET /plugins/dynamic_challenges/assets/view.js?_=1603854389007 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:30] "[37mGET /api/v1/challenges/3/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:32] "[37mGET /api/v1/challenges/4 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:32] "[37mGET /plugins/dynamic_challenges/assets/view.js?_=1603854389008 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:32] "[37mGET /api/v1/challenges/4/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:34] "[37mGET /team HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:34] "[37mGET /themes/core/static/js/pages/teams/private.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:34] "[33mGET /themes/core/static/js/graphs.dev.js?d=9f7910a1 HTTP/1.1[0m" 404 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:34] "[37mGET /themes/core/static/js/pages/stats.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:35] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:35] "[37mGET /api/v1/teams/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:35] "[37mGET /api/v1/teams/me/fails HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:35] "[37mGET /api/v1/teams/me/awards HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:07:35] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 12:10:00] "[37mGET /api/v1/scoreboard HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 12:10:00] "[37mGET /api/v1/scoreboard/top/10 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 163.152.3.141 - - [28/Oct/2020 12:10:49] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:11:56] "[37mGET / HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:11:57] "[37mGET /themes/core/static/img/ku_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:11:57] "[37mGET /themes/core/static/css/main.dev.css?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:11:57] "[37mGET /themes/core/static/img/ctf_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:11:57] "[37mGET /themes/core/static/css/core.dev.css?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:11:57] "[37mGET /themes/core/static/js/core.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:11:59] "[37mGET /themes/core/static/js/vendor.bundle.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:12:00] "[37mGET /themes/core/static/js/helpers.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:12:01] "[37mGET /themes/core/static/js/pages/main.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:12:01] "[37mGET /themes/core/static/img/cs_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:12:02] "[37mGET /themes/core/static/img/cydf_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:12:02] "[37mGET /themes/core/static/img/cykor_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:12:09] "[37mGET / HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:12:09] "[37mGET /themes/core/static/js/vendor.bundle.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:12:35] "[37mGET /api/v1/teams/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:12:35] "[37mGET /api/v1/teams/me/fails HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:12:35] "[37mGET /api/v1/teams/me/awards HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:12:57] "[37mGET / HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:12:57] "[37mGET /themes/core/static/css/core.dev.css?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:12:57] "[37mGET /themes/core/static/img/ku_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:12:57] "[37mGET /themes/core/static/img/ctf_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:12:57] "[37mGET /themes/core/static/css/main.dev.css?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:12:57] "[37mGET /themes/core/static/js/vendor.bundle.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:12:57] "[37mGET /themes/core/static/js/core.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:12:57] "[37mGET /themes/core/static/js/helpers.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:12:57] "[37mGET /themes/core/static/js/pages/main.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:12:58] "[37mGET /themes/core/static/img/cs_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:12:58] "[37mGET /themes/core/static/img/cydf_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:12:58] "[37mGET /themes/core/static/img/cykor_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:13:00] "[37mGET /themes/core/static/img/favicon.ico?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:13:00] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:13:00] "[37mGET /themes/core/static/sounds/notification.mp3 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:32] "[37mGET / HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:32] "[37mGET /themes/core/static/css/main.dev.css?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:32] "[37mGET /themes/core/static/css/core.dev.css?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:32] "[37mGET /themes/core/static/img/ctf_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:33] "[37mGET /themes/core/static/img/ku_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:33] "[37mGET /themes/core/static/img/cs_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:33] "[37mGET /themes/core/static/img/cydf_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:33] "[37mGET /themes/core/static/img/cykor_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:34] "[37mGET /themes/core/static/js/vendor.bundle.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:34] "[37mGET /themes/core/static/js/core.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:35] "[37mGET /themes/core/static/js/helpers.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:36] "[37mGET /themes/core/static/js/pages/main.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:41] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:41] "[37mGET /themes/core/static/sounds/notification.webm HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:41] "[37mGET /themes/core/static/img/favicon.ico?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:50] "[37mGET /scoreboard HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:51] "[37mGET /themes/core/static/js/pages/scoreboard.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:51] "[37mGET /themes/core/static/js/echarts.bundle.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:54] "[37mGET /teams/2 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:54] "[37mGET /themes/core/static/js/pages/stats.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:54] "[37mGET /themes/core/static/js/echarts.bundle.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:54] "[33mGET /themes/core/static/js/graphs.dev.js?d=9f7910a1 HTTP/1.1[0m" 404 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:56] "[37mGET /themes/core/static/js/echarts.bundle.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:56] "[37mGET /teams/1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:56] "[37mGET /themes/core/static/js/echarts.bundle.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:56] "[33mGET /themes/core/static/js/graphs.dev.js?d=9f7910a1 HTTP/1.1[0m" 404 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:57] "[37mGET /themes/core/static/js/echarts.bundle.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.25.3 - - [28/Oct/2020 12:13:57] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 39.7.55.88 - - [28/Oct/2020 12:14:10] "[37mGET / HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.55.88 - - [28/Oct/2020 12:14:11] "[37mGET /themes/core/static/css/main.dev.css?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.55.88 - - [28/Oct/2020 12:14:11] "[37mGET /themes/core/static/css/core.dev.css?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.55.88 - - [28/Oct/2020 12:14:11] "[37mGET /themes/core/static/img/ctf_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.55.88 - - [28/Oct/2020 12:14:11] "[37mGET /themes/core/static/img/ku_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.55.88 - - [28/Oct/2020 12:14:12] "[37mGET /themes/core/static/img/cs_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.55.88 - - [28/Oct/2020 12:14:12] "[37mGET /themes/core/static/img/cydf_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.55.88 - - [28/Oct/2020 12:14:12] "[37mGET /themes/core/static/img/cykor_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.55.88 - - [28/Oct/2020 12:14:12] "[37mGET /themes/core/static/js/vendor.bundle.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.55.88 - - [28/Oct/2020 12:14:12] "[37mGET /themes/core/static/js/core.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.55.88 - - [28/Oct/2020 12:14:12] "[37mGET /themes/core/static/js/helpers.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.55.88 - - [28/Oct/2020 12:14:12] "[37mGET /themes/core/static/js/pages/main.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 39.7.55.88 - - [28/Oct/2020 12:14:14] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:15:20] "[37mGET /users HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:15:21] "[37mGET /themes/core/static/sounds/notification.mp3 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:15:21] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:15:25] "[37mGET /scoreboard HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:15:25] "[37mGET /themes/core/static/js/pages/scoreboard.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:15:25] "[37mGET /themes/core/static/js/echarts.bundle.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:15:27] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 223.62.175.56 - - [28/Oct/2020 12:15:27] "[37mGET /api/v1/scoreboard/top/10 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:26] "[37mGET /scoreboard HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:26] "[37mGET /api/v1/scoreboard/top/10 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:26] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:27] "[37mGET /users HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:27] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:48] "[37mGET / HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:49] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:50] "[37mGET /scoreboard HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:51] "[37mGET /api/v1/scoreboard/top/10 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:51] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:51] "[32mGET /challenges HTTP/1.1[0m" 302 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:51] "[37mGET /login?next=%2Fchallenges%3F HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:52] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:52] "[37mGET /scoreboard HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:52] "[37mGET /api/v1/scoreboard/top/10 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:52] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:53] "[37mGET /users HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:53] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:57] "[32mGET /challenges HTTP/1.1[0m" 302 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:57] "[37mGET /login?next=%2Fchallenges%3F HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:57] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:57] "[37mGET /scoreboard HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:57] "[37mGET /api/v1/scoreboard/top/10 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:17:57] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:18:44] "[37mGET /scoreboard HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:18:44] "[37mGET /api/v1/scoreboard/top/10 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:18:44] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:18:45] "[32mGET /challenges HTTP/1.1[0m" 302 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:18:45] "[37mGET /login?next=%2Fchallenges%3F HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:18:45] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:18:45] "[37mGET /users HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:18:46] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:18:46] "[37mGET / HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:18:46] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:19:03] "[37mGET /scoreboard HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:19:03] "[37mGET /api/v1/scoreboard/top/10 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 12:19:03] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+ERROR [werkzeug] Error on request:
+Traceback (most recent call last):
+  File "/home/hanch/.local/lib/python3.6/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/hanch/.local/lib/python3.6/site-packages/werkzeug/serving.py", line 315, in execute
+    write(data)
+  File "/home/hanch/.local/lib/python3.6/site-packages/werkzeug/serving.py", line 296, in write
+    self.wfile.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+  File "/home/hanch/.local/lib/python3.6/site-packages/gevent/_ssl3.py", line 537, in sendall
+    return socket.sendall(self, data, flags)
+  File "/home/hanch/.local/lib/python3.6/site-packages/gevent/_socket3.py", line 534, in sendall
+    return _socketcommon._sendall(self, data_memory, flags)
+  File "/home/hanch/.local/lib/python3.6/site-packages/gevent/_socketcommon.py", line 392, in _sendall
+    timeleft = __send_chunk(socket, chunk, flags, timeleft, end)
+  File "/home/hanch/.local/lib/python3.6/site-packages/gevent/_socketcommon.py", line 321, in __send_chunk
+    data_sent += socket.send(chunk, flags)
+  File "/home/hanch/.local/lib/python3.6/site-packages/gevent/_ssl3.py", line 501, in send
+    return self._sslobj.write(data)
+  File "/usr/lib/python3.6/ssl.py", line 642, in write
+    return self._sslobj.write(data)
+TimeoutError: [Errno 110] Connection timed out
+ERROR [werkzeug] Error on request:
+Traceback (most recent call last):
+  File "/home/hanch/.local/lib/python3.6/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/hanch/.local/lib/python3.6/site-packages/werkzeug/serving.py", line 315, in execute
+    write(data)
+  File "/home/hanch/.local/lib/python3.6/site-packages/werkzeug/serving.py", line 296, in write
+    self.wfile.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+  File "/home/hanch/.local/lib/python3.6/site-packages/gevent/_ssl3.py", line 537, in sendall
+    return socket.sendall(self, data, flags)
+  File "/home/hanch/.local/lib/python3.6/site-packages/gevent/_socket3.py", line 534, in sendall
+    return _socketcommon._sendall(self, data_memory, flags)
+  File "/home/hanch/.local/lib/python3.6/site-packages/gevent/_socketcommon.py", line 392, in _sendall
+    timeleft = __send_chunk(socket, chunk, flags, timeleft, end)
+  File "/home/hanch/.local/lib/python3.6/site-packages/gevent/_socketcommon.py", line 321, in __send_chunk
+    data_sent += socket.send(chunk, flags)
+  File "/home/hanch/.local/lib/python3.6/site-packages/gevent/_ssl3.py", line 501, in send
+    return self._sslobj.write(data)
+  File "/usr/lib/python3.6/ssl.py", line 642, in write
+    return self._sslobj.write(data)
+TimeoutError: [Errno 110] Connection timed out
+INFO  [werkzeug] 116.36.233.234 - - [28/Oct/2020 12:37:23] "[37mGET / HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 116.36.233.234 - - [28/Oct/2020 12:37:23] "[37mGET /themes/core/static/img/ctf_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 116.36.233.234 - - [28/Oct/2020 12:37:23] "[37mGET /themes/core/static/img/ku_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 116.36.233.234 - - [28/Oct/2020 12:37:23] "[37mGET /themes/core/static/css/core.dev.css?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 116.36.233.234 - - [28/Oct/2020 12:37:23] "[37mGET /themes/core/static/css/main.dev.css?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 116.36.233.234 - - [28/Oct/2020 12:37:23] "[37mGET /themes/core/static/js/vendor.bundle.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 116.36.233.234 - - [28/Oct/2020 12:37:23] "[37mGET /themes/core/static/js/core.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 116.36.233.234 - - [28/Oct/2020 12:37:23] "[37mGET /themes/core/static/js/helpers.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 116.36.233.234 - - [28/Oct/2020 12:37:24] "[37mGET /themes/core/static/js/pages/main.dev.js?d=9f7910a1 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 116.36.233.234 - - [28/Oct/2020 12:37:24] "[37mGET /themes/core/static/img/cs_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 116.36.233.234 - - [28/Oct/2020 12:37:24] "[37mGET /themes/core/static/img/cydf_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 116.36.233.234 - - [28/Oct/2020 12:37:24] "[37mGET /themes/core/static/img/cykor_logo.png HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 116.36.233.234 - - [28/Oct/2020 12:37:25] "[37mGET /themes/core/static/sounds/notification.mp3 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 116.36.233.234 - - [28/Oct/2020 12:37:25] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 116.36.233.234 - - [28/Oct/2020 12:37:31] "[32mGET /challenges HTTP/1.1[0m" 302 -
+INFO  [werkzeug] 116.36.233.234 - - [28/Oct/2020 12:37:31] "[37mGET /login?next=%2Fchallenges%3F HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 116.36.233.234 - - [28/Oct/2020 12:37:32] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 121.53.206.140 - - [28/Oct/2020 13:11:52] "[37mGET / HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:25] "[37mGET / HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:25] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:27] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:27] "[31m[1mGET /events HTTP/1.1[0m" 403 -
+[10/28/2020 13:16:34] 221.147.226.187 - None logged in
+[10/28/2020 13:16:34] 221.147.226.187 - None logged in
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:34] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:34] "[37mGET /challenges HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:34] "[37mGET /api/v1/teams/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:34] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:34] "[37mGET /api/v1/challenges HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:34] "[37mGET /api/v1/teams/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:35] "[37mGET /api/v1/users/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:35] "[37mGET /scoreboard HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:36] "[37mGET /api/v1/scoreboard/top/10 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:36] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:36] "[37mGET /challenges HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:36] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:36] "[37mGET /api/v1/teams/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:37] "[37mGET /api/v1/challenges HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:37] "[37mGET /api/v1/teams/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:37] "[37mGET /api/v1/users/me/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:37] "[37mGET /api/v1/challenges/4 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:37] "[37mGET /plugins/dynamic_challenges/assets/view.js?_=1603858596290 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:38] "[37mGET /api/v1/challenges/4/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:39] "[37mGET /api/v1/challenges/4/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:43] "[37mGET /api/v1/challenges/4/solves HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:44] "[37mGET /users HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:45] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:45] "[37mGET /scoreboard HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:45] "[37mGET /api/v1/scoreboard/top/10 HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:16:45] "[37mGET /events HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 74.82.47.5 - - [28/Oct/2020 13:18:27] "[37mGET / HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:21:46] "[37mGET /api/v1/scoreboard HTTP/1.1[0m" 200 -
+INFO  [werkzeug] 221.147.226.187 - - [28/Oct/2020 13:21:46] "[37mGET /api/v1/scoreboard/top/10 HTTP/1.1[0m" 200 -

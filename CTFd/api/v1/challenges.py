@@ -13,6 +13,7 @@ from CTFd.constants import RawEnum
 from CTFd.models import ChallengeFiles as ChallengeFilesModel
 from CTFd.models import (
     Challenges,
+    Users,
     Fails,
     Flags,
     Hints,
@@ -665,7 +666,7 @@ class ChallengeSolves(Resource):
         Model = get_model()
 
         solves = (
-            Solves.query.join(Model, Solves.account_id == Model.id)
+            Solves.query.join(Users, Solves.user_id == Users.id)
             .filter(
                 Solves.challenge_id == challenge_id,
                 Model.banned == False,
@@ -680,14 +681,15 @@ class ChallengeSolves(Resource):
             if (is_admin() is False) or (is_admin() is True and preview):
                 dt = datetime.datetime.utcfromtimestamp(freeze)
                 solves = solves.filter(Solves.date < dt)
-
+        
         for solve in solves:
             response.append(
                 {
-                    "account_id": solve.account_id,
-                    "name": solve.account.name,
+                    "account_id": solve.user_id,
+                    "team": solve.team.name,
+                    "name": solve.user.name,
                     "date": isoformat(solve.date),
-                    "account_url": generate_account_url(account_id=solve.account_id),
+                    "account_url": "/users/"+str(solve.user_id),
                 }
             )
 
