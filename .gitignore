@@ -82,3 +82,4 @@ flask_profiler.sql
 init.py
 
 supplier/
+ssl/

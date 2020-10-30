@@ -1,16 +1,27 @@
 import argparse
+from flask_sslify import SSLify
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--port", help="Port for debug server to listen on", default=31443)
-parser.add_argument(
-    "--profile", help="Enable flask_profiler profiling", action="store_true"
-)
-parser.add_argument(
-    "--disable-gevent",
-    help="Disable importing gevent and monkey patching",
-    action="store_false",
-)
+
+parser.add_argument("--port",
+                    help="Port for debug server to listen on", 
+                    default=443)
+parser.add_argument("--profile",
+                    help="Enable flask_profiler profiling",
+                    action="store_true")
+parser.add_argument("--disable-gevent",
+                    help="Disable importing gevent and monkey patching",
+                    action="store_false")
+parser.add_argument("--pem",
+                    help = "SSL pem key. Required if you run on ssl mode.")
+parser.add_argument("--crt",
+                    help = "SSL certificate. Required if you run on ssl mode.")
+parser.add_argument("-d","--debug",
+                    help = "Run flask server as debug mode",
+                    action = "store_true")
+
 args = parser.parse_args()
+
 if args.disable_gevent:
     print(" * Importing gevent and monkey patching. Use --disable-gevent to disable.")
     from gevent import monkey
@@ -40,4 +51,11 @@ if args.profile:
     toolbar.init_app(app)
     print(" * Flask profiling running at http://127.0.0.1:4000/flask-profiler/")
 
-app.run(debug=True, threaded=True, host="0.0.0.0", port=args.port)
+if args.crt and args.pem:
+
+    ctx = (args.crt,args.pem)
+    sslify = SSLify(app)
+
+    app.run(debug=args.debug, threaded=True, host="0.0.0.0", port=args.port, ssl_context=ctx)
+else:
+    app.run(debug=args.debug, threaded=True, host="0.0.0.0", port=args.port)
