@@ -80,3 +80,5 @@ node_modules/
 flask_profiler.sql
 
 ssl/
+
+nohup.out

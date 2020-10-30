@@ -5,6 +5,7 @@ import os
 admin_id = 'admin'
 admin_email = 'cndghks15@gmail.com'
 admin_pw = urlsafe_b64encode((os.urandom(33)))
+admin_pw = b'qcp7iXp25vCiCg6UjY1Okc-87bhyQee4V6LaxfKXOGAB'
 admin_pw_hash = bcrypt_sha256.hash(admin_pw)
 
 config = {

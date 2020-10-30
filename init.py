@@ -1,5 +1,6 @@
 import sqlite3
 import json
+from hashlib import sha256
 from init_setting import config as raw_config, pages, teams, users, admin_id, admin_pw
 
 con = sqlite3.connect('./CTFd/ctfd.db')
@@ -39,36 +40,42 @@ insert("users", users)
 print("admin id: "+admin_id)
 print("admin pw: "+admin_pw.decode())
 
-challenges = [
-    (1, 'test_chall_1', 'description', 0, 
-    1000, 'pwn', 
-    'dynamic', 'visible', None),
-    (2, 'test_chall_2', 'description', 0, 
-    1000, 'pwn', 
-    'dynamic', 'visible', None),
-    (3, 'test_chall_3', 'description', 0, 
-    1000, 'web', 
-    'dynamic', 'visible', None),
-    (4, 'test_chall_4', 'description', 0, 
-    1000, 'web', 
-    'dynamic', 'visible', None),
-]
-dynamic_challenge = [
-    (1, 1000, 100, 50),
-    (2, 1000, 100, 50),
-    (3, 1000, 100, 50),
-    (4, 1000, 100, 50),
-]
-flags = [
-    (1, 1, 'static', 'KOREA{flag}',''),
-    (2, 2, 'static', 'KOREA{flag}',''),
-    (3, 3, 'static', 'KOREA{flag}',''),
-    (4, 4, 'static', 'KOREA{flag}',''),
-]
+challs = [{
+    'name': 'challenge_name',
+    'description': 'example description.',
+    'category': 'PWN', # PWN/REV/WEB/CRYPTO/MISC
+    'flag': 'KOREA{}',
+    'files': ['chall_binary', 'libc.so.6']
+}]
+
+challenges = []
+dynamic_challenge = []
+flags = []
+files = []
+
+i = 0
+f = 0
+for chall in challs:
+    i += 1
+
+    challenges.append((i, chall['name'], chall['description'], 0, 
+    1000, chall['category'], 
+    'dynamic', 'visible', None))
+
+    dynamic_challenge.append((i, 500, 100, 30))
+
+    flags.append((i, i, 'static', chall['flag'],''))
+
+    if len(chall['files']) != 0:
+        f += 1
+        for filename in chall.files:
+            files.append((f, 'challenge', sha256(chall.name.encode()).hexdigest()+'/'+filename, i, None))
 
 delete("challenges")
 delete("dynamic_challenge")
 delete("flags")
+delete("files")
+
 delete("tracking")
 delete("submissions")
 delete("solves")
@@ -76,6 +83,7 @@ delete("solves")
 insert("challenges", challenges)
 insert("dynamic_challenge", dynamic_challenge)
 insert("flags", flags)
+insert("files", files)
 
 con.commit()
 con.close()
