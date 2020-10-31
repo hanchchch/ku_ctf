@@ -77,11 +77,14 @@ for chall in challs:
     flags.append((i, i, 'static', chall['flag'],''))
 
     if len(chall['files']) != 0:
-        f += 1
         upload_dir = sha256(chall['name'].encode()).hexdigest()
         for filename in chall['files']:
+            f += 1
             files.append((f, 'challenge', upload_dir+'/'+filename, i, None))
-            os.mkdir("./CTFd/uploads/"+upload_dir)
+            try:
+                os.mkdir("./CTFd/uploads/"+upload_dir)
+            except:
+                pass
             shutil.copy(chall['chall_dir']+'/'+filename, "./CTFd/uploads/"+upload_dir+'/'+filename)
 
 delete("challenges")
