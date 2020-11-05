@@ -38,7 +38,7 @@ config = []
 for key in list(raw_config.keys()):
     i += 1
     config.append((i, key, raw_config[key]))
-"""
+
 delete("config")
 delete("pages")
 delete("teams")
@@ -51,7 +51,6 @@ insert("users", users)
 
 print("admin id: "+admin_id)
 print("admin pw: "+admin_pw.decode())
-"""
 
 print(json.dumps(challs, indent=4, ensure_ascii=False))
 
@@ -96,11 +95,10 @@ delete("dynamic_challenge")
 delete("flags")
 delete("files")
 
-"""
+
 delete("tracking")
 delete("submissions")
 delete("solves")
-"""
 
 insert("challenges", challenges)
 insert("dynamic_challenge", dynamic_challenge)
