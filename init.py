@@ -33,8 +33,6 @@ for (cur_dir, dirs, files) in os.walk('supplier'):
             challs.append(props)
 
 
-
-
 i = 0
 config = []
 for key in list(raw_config.keys()):
@@ -64,12 +62,11 @@ files = []
 
 i = 0
 f = 0
-
 for chall in challs:
     i += 1
 
     challenges.append((i, chall['name'], chall['description'], 0, 
-    1000, chall['category'], 
+    500, chall['category'], 
     'dynamic', 'visible', None))
 
     dynamic_challenge.append((i, 500, 100, 30))
@@ -87,14 +84,23 @@ for chall in challs:
                 pass
             shutil.copy(chall['chall_dir']+'/'+filename, "./CTFd/uploads/"+upload_dir+'/'+filename)
 
+i += 1
+challenges.append((i, 'Sanity check', 'Welcome!!!', 0, 
+    10, 'MISC', 
+    'dynamic', 'visible', None))
+dynamic_challenge.append((i, 10, 10, 10))
+flags.append((i, i, 'static', 'KOREA{zzz}',''))
+
 delete("challenges")
 delete("dynamic_challenge")
 delete("flags")
 delete("files")
 
+"""
 delete("tracking")
 delete("submissions")
 delete("solves")
+"""
 
 insert("challenges", challenges)
 insert("dynamic_challenge", dynamic_challenge)

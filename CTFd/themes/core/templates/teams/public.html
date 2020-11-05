@@ -146,6 +146,7 @@
 						<thead>
 						<tr>
 							<td><b>Challenge</b></td>
+							<td><b>Solver</b></td>
 							<td class="d-none d-md-block d-lg-block"><b>Category</b></td>
 							<td><b>Value</b></td>
 							<td><b>Time</b></td>
@@ -153,16 +154,21 @@
 						</thead>
 						<tbody>
 						{% for solve in solves %}
-							<tr>
+							<tr id="solve-{{ loop.index }}">
 								<td>
 									<a href="{{ url_for('challenges.listing') }}#{{ solve.challenge.name }}-{{ solve.challenge.id }}">
 										{{ solve.challenge.name }}
 									</a>
 								</td>
-								<td class="d-none d-md-block d-lg-block">{{ solve.challenge.category }}</td>
+								<td>
+									<a href="/users/{{ solve.user_id }}">
+										{{ solve.user.name }}
+									</a>
+								</td>
+								<td>{{ solve.challenge.category }}</td>
 								<td>{{ solve.challenge.value }}</td>
 								<td class="solve-time">
-									<span data-time="{{ solve.date | isoformat }}"></span>
+										<span data-time="{{ solve.date | isoformat }}"></span>
 								</td>
 							</tr>
 						{% endfor %}
@@ -188,6 +194,10 @@
 			'name': team.name,
 			'account_id': 'me' if user is defined and user.team_id == team.id else team.id,
 		} | tojson }};
+		const first = {{firsts}};
+		first.forEach(i => {
+			document.getElementById("solve-"+i).setAttribute("style","opacity: 0.5;");
+		})
 	</script>
 	<script defer src="{{ url_for('views.themes', path='js/echarts.bundle.js') }}"></script>
 	<script defer src="{{ url_for('views.themes', path='js/graphs.js') }}"></script>

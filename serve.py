@@ -5,7 +5,7 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument("--port",
                     help="Port for debug server to listen on", 
-                    default=443)
+                    default=80)
 parser.add_argument("--profile",
                     help="Enable flask_profiler profiling",
                     action="store_true")

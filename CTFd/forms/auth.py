@@ -10,6 +10,7 @@ from CTFd.forms.users import attach_custom_user_fields, build_custom_user_fields
 def RegistrationForm(*args, **kwargs):
     class _RegistrationForm(BaseForm):
         name = StringField("User Name", validators=[InputRequired()])
+        number = StringField("Student ID", validators=[InputRequired()])
         email = EmailField("Email", validators=[InputRequired()])
         password = PasswordField("Password", validators=[InputRequired()])
         team = SelectField("Team", validators=[InputRequired()], choices=[('CI', '정보대학'), ('DIS', '정보보호학부') ])

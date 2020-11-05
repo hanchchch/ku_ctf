@@ -117,7 +117,6 @@ class UserBaseForm(BaseForm):
     email = EmailField("Email", validators=[InputRequired()])
     password = PasswordField("Password")
     website = StringField("Website")
-    affiliation = StringField("Affiliation")
     country = SelectField("Country", choices=SELECT_COUNTRIES_LIST)
     type = SelectField("Type", choices=[("user", "User"), ("admin", "Admin")])
     verified = BooleanField("Verified")

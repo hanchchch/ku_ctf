@@ -149,6 +149,16 @@ def public(team_id):
     place = team.place
     score = team.score
 
+    challs = {}
+    firsts = []
+    i = 0
+    for solve in solves:
+        i += 1
+        if challs.get(solve.challenge.name) is None:
+            challs.update({solve.challenge.name:"1"})
+        else:
+            firsts.append(i)            
+
     if errors:
         return render_template("teams/public.html", team=team, errors=errors)
 
@@ -158,6 +168,7 @@ def public(team_id):
     return render_template(
         "teams/public.html",
         solves=solves,
+        firsts=firsts,
         awards=awards,
         team=team,
         score=score,

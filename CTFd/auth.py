@@ -187,13 +187,16 @@ def register():
     errors = get_errors()
     if request.method == "POST":
         name = request.form.get("name", "").strip()
-        email_address = request.form.get("email", "").strip().lower()
+        number = request.form.get("number", "").strip()
+        email_address = request.form.get("email", "").strip()
         password = request.form.get("password", "").strip()
         team = request.form.get("team", "").strip()
 
         website = request.form.get("website")
-        affiliation = request.form.get("affiliation")
+        affiliation = number
         country = request.form.get("country")
+        if country is None:
+            country = 'KR'
 
         name_len = len(name) == 0
         names = Users.query.add_columns("name", "id").filter_by(name=name).first()
