@@ -3,7 +3,7 @@ import json
 import os
 import shutil
 from hashlib import sha256
-from init_setting import config as raw_config, pages, teams, users, admin_id, admin_pw
+from init_setting import config as raw_config, pages, teams, users, admin_id, admin_pw, notifications
 
 con = sqlite3.connect('./CTFd/ctfd.db')
 cur = con.cursor()
@@ -105,8 +105,11 @@ def init_submissions():
     delete("submissions")
     delete("solves")
 
+def init_notifications():
+    delete("notifications")
+    insert("notifications", notifications)
 
-
+init_notifications()
 
 con.commit()
 con.close()

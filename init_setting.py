@@ -71,10 +71,14 @@ teams = [
     "2020-10-24 08:26:05.036659"),
 ]
 
-users = (1, None, admin_id, 
+users = [(1, None, admin_id, 
     admin_pw_hash, 
     admin_email,
     "admin",
     None, None, None, None, None, 
     1, 0, 0, 2,
-    "2020-10-24 08:15:36.814443")
+    "2020-10-24 08:15:36.814443")]
+
+notifications = [
+    (1, 'Rules', 'rules rules rules ~~ ', '2020-11-06 00:00:00.0000000', None, None)
+]
