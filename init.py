@@ -3,7 +3,7 @@ import json
 import os
 import shutil
 from hashlib import sha256
-from init_setting import config as raw_config, pages, teams, users, admin_id, admin_pw, notifications
+from setting_init import config as raw_config, pages, teams, users, admin_id, admin_pw, notifications
 
 con = sqlite3.connect('./CTFd/ctfd.db')
 cur = con.cursor()

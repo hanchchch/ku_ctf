@@ -80,5 +80,6 @@ users = [(1, None, admin_id,
     "2020-10-24 08:15:36.814443")]
 
 notifications = [
-    (1, 'Rules', 'rules rules rules ~~ ', '2020-11-06 00:00:00.0000000', None, None)
+    (1, 'Rules', 'rules rules rules ~~ ', '2020-11-06 00:00:00.0000000', None, None),
+    (2, 'Contact', 'discord: discord link ~~~~~', '2020-11-06 00:00:00.0000000', None, None)
 ]
