@@ -1,6 +1,7 @@
 import base64
 
 import requests
+import re
 from flask import Blueprint
 from flask import current_app as app
 from flask import redirect, render_template, request, session, url_for
@@ -191,6 +192,10 @@ def register():
         email_address = request.form.get("email", "").strip()
         password = request.form.get("password", "").strip()
         team = request.form.get("team", "").strip()
+
+        rx = re.compile('^20..(21|42|32|33)....$')
+        if rx.search(number) is None:
+            errors.append("Invalid student id.")
 
         website = request.form.get("website")
         affiliation = number

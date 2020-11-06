@@ -109,7 +109,12 @@ def init_notifications():
     delete("notifications")
     insert("notifications", notifications)
 
-init_notifications()
+
+#init_users()
+#init_submissions()
+#init_config()
+#init_notifications()
+init_challs()
 
 con.commit()
 con.close()

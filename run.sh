@@ -1,5 +1,5 @@
-port_nginx=31443
-port_python=31442
+port_nginx=443
+port_python=31443
 
 sudo nginx -s quit 2> /dev/null
 pid=$(sudo netstat -tnlp | grep ":${port_nginx} " | awk '{print $7}' | cut -f 1 -d '/')
