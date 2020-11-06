@@ -93,7 +93,13 @@ notifications = [
 - https://discord.gg/Vh9zvSspkQ<br>
 - 디스코드 채널에서는 대회가 진행되는 동안 문제에 대한 질문 등을 포함하여 참가자와 운영진 간의 질의응답과 공지사항 전달이 이루어집니다.''', '2020-11-06 00:00:00.0000000', None, None),
     (1, 'Challenge Colors', '''
+<<<<<<< HEAD
 - 팀에서 아무도 풀지 않은 문제는 회색으로 표시 됩니다. <br><img src="/theme/core/static/img/no_solve.png"><br>
 - 팀에서 누군가 풀은 문제는 어두운 초록색으로 표시 됩니다. <br><img src="/theme/core/static/img/team_solve.png"><br>
 - 자신이 풀은 문제는 밝은 초록색으로 표시 됩니다. <br><img src="/theme/core/static/img/me_solve.png"><br>''', '2020-11-06 00:00:00.0000000', None, None)
+=======
+- 팀에서 아무도 풀지 않은 문제는 회색으로 표시 됩니다. <br><img src="/themes/core/static/img/no_solve.png"><br>
+- 팀에서 누군가 풀은 문제는 어두운 초록색으로 표시 됩니다. <br><img src="/themes/core/static/img/team_solve.png"><br>
+- 자신이 풀은 문제는 밝은 초록색으로 표시 됩니다. <br><img src="/themes/core/static/img/me_solve.png"><br>''', '2020-11-06 00:00:00.0000000', None, None)
+>>>>>>> 4377006aea43545808d7d1dff2b83bd851e7fda7
 ]
