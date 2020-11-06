@@ -14,8 +14,8 @@ config = {
     'ctf_name': 'KU CTF',
     'ctf_description': '',
     'user_mode': 'teams',
-    'start': '1602983600',
-    'end': None,
+    'start': '1604653200',
+    'end': '1604696400',
     'freeze': None,
     'challenge_visibility': 'private',
     'registration_visibility': 'public',
@@ -80,6 +80,16 @@ users = [(1, None, admin_id,
     "2020-10-24 08:15:36.814443")]
 
 notifications = [
-    (1, 'Rules', 'rules rules rules ~~ ', '2020-11-06 00:00:00.0000000', None, None),
-    (2, 'Contact', 'discord: discord link ~~~~~', '2020-11-06 00:00:00.0000000', None, None)
+    (3, 'Rules', '''
+1. 진행 시간: 11/6 18:00 ~ 11/7 06:00<br>
+2. flag format: KOREA{zzz}<br>
+3. 참가자는 문제에서 주어진 서버만을 대상으로 공격을 시도해야 합니다.<br>
+4. 문제에 대한 질문이 있을 시 해당되는 help 채널에 admin을 멘션하고 문제 이름을 명시해주시기 바랍니다(ex. @admin koreaspa-pwn 질문 있습니다). 문제에 대한 질문 이외의 문의사항이 있을 시 etc 채널을 이용해주시기 바랍니다.<br>
+5. 디스코드 채널에서 문제 풀이에 직접적인 힌트가 될 수 있는 내용을 공유하거나, 대회와 관련 없는 사담을 나누는 참가자는 운영진이 임의로 제재할 수 있습니다.''', '2020-11-06 00:00:00.0000000', None, None),
+    (2, '!Caution!', '''
+- 학번은 대회 종료 이후 상품 지급을 위한 본인 확인에 사용됩니다. 한 번 등록한 학번은 수정할 수 없습니다.<br>
+- 참가자는 본인이 재학 중인 학부에 해당하는 팀을 선택해야 합니다. 한 번 선택한 팀은 수정할 수 없습니다.<br>''', '2020-11-06 00:00:00.0000000', None, None),
+    (1, 'Contact', '''디스코드 채널<br>
+- https://discord.gg/Vh9zvSspkQ<br>
+- 디스코드 채널에서는 대회가 진행되는 동안 문제에 대한 질문 등을 포함하여 참가자와 운영진 간의 질의응답과 공지사항 전달이 이루어집니다.''', '2020-11-06 00:00:00.0000000', None, None)
 ]
